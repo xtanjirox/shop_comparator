@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  postgres-scrap:
+    container_name: shop_comparator_postgres
+    image: postgres:16
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres_scrap
+      - POSTGRES_PASSWORD=postgres_scrap
+      - POSTGRES_DB=postgres_scrap
